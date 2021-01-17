@@ -20,8 +20,12 @@ public class ContactController {
     }
 
     @GetMapping({"","/"})
-    public String getAllContacts(Model model) {
-        model.addAttribute("contacts", contactService.getAllContacts());
+    public String getAllContacts(Model model, String keyword) {
+        if(keyword != null) {
+            model.addAttribute("contacts", contactService.findByKeyword(keyword));
+        } else {
+            model.addAttribute("contacts", contactService.getAllContacts());
+        }
         return "list-contacts";
     }
 

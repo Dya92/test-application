@@ -19,11 +19,11 @@ public class ContactServiceImpl implements ContactService {
 
     @Override
     public List<Contact> getAllContacts() {
-        List<Contact> result = (List<Contact>) contactRepository.findAll();
+        List<Contact> result = contactRepository.findAll();
         if(result.size() > 0) {
             return result;
         } else {
-            return new ArrayList<Contact>();
+            return new ArrayList<>();
         }
     }
 
@@ -66,5 +66,11 @@ public class ContactServiceImpl implements ContactService {
         } else {
             throw new RecordNotFoundException("No contact record exists for given id." + id);
         }
+    }
+
+    //Get employees by keyword
+    @Override
+    public List<Contact> findByKeyword(String keyword) {
+        return contactRepository.findByKeyword(keyword);
     }
 }

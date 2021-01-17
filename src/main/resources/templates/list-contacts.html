@@ -22,6 +22,10 @@
                     <a href="/contact/edit" class="btn btn-primary">
                         <i class="fas fa-user-plus ml-2"> Add Employee </i></a>
                 </p>
+                <form th:action="@{contact}" method="get">
+                    <input id="txtSearch" type="text" name="keyword">
+                    <button type="submit">GO</button>
+                </form>
                 <div class="col-md-10">
                     <h2 th:case="null">No record found !!</h2>
                     <div th:case="*">

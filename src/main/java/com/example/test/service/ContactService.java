@@ -9,4 +9,5 @@ public interface ContactService {
     Contact getContactById(Long id);
     Contact createOrUpdateContact(Contact contact);
     void deleteContactById(Long id);
+    List<Contact> findByKeyword(String keyword);
 }
