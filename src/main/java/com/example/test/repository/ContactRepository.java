@@ -11,6 +11,6 @@ import java.util.List;
 @Repository
 public interface ContactRepository extends JpaRepository<Contact, Long> {
 
-    @Query(value = "SELECT * FROM contacts c WHERE c.full_name LIKE %:keyword%", nativeQuery = true)
-    List<Contact> findByKeyword(@Param("keyword") String keyword);
+//    @Query(value = "SELECT * FROM contacts c WHERE c.full_name LIKE %:keyword%", nativeQuery = true)
+//    List<Contact> findByKeyword(@Param("keyword") String keyword);
 }

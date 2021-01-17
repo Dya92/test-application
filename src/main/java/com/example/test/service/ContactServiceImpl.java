@@ -68,9 +68,8 @@ public class ContactServiceImpl implements ContactService {
         }
     }
 
-    //Get employees by keyword
-    @Override
-    public List<Contact> findByKeyword(String keyword) {
-        return contactRepository.findByKeyword(keyword);
-    }
+//    @Override
+//    public List<Contact> findByKeyword(String keyword) {
+//        return contactRepository.findByKeyword(keyword);
+//    }
 }
